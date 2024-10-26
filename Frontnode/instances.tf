@@ -7,8 +7,7 @@ module "first-frontend-machine" {
   sg_name        = var.frontend-1-sg-name
   ingress_port_1 = var.frontend-1-port-1
   ingress_port_2 = var.frontend-1-port-2
-  
-  } 
+ } 
 
 module "second-frontend-machine" {
   source         = "../alb-ec2-sg-module/"
@@ -16,9 +15,10 @@ module "second-frontend-machine" {
   sg_name        = var.frontend-2-sg-name
   ingress_port_1 = var.frontend-2-port-1
   ingress_port_2 = var.frontend-2-port-2
-  
-  }
- 
- #user_data     = file("./frontend_install.sh")
+     }
+
+        
+
+  #user_data     = file("./frontend_install.sh")
  #user_data     = file("./frontend_install.sh")
 

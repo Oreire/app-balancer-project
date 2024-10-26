@@ -23,8 +23,7 @@ resource "aws_lb_target_group" "my-tg-frontend" {
 
 resource "aws_lb_target_group_attachment" "tg_attachemnet_frontend" { 
   target_group_arn = aws_lb_target_group.my-tg-frontend.arn
-  target_id        = [aws_instance.first-frontend-node.id, aws_instance.second-frontend-node.id]
-   
+  target_id        = [module.first-frontend-machine.aws_instance.app_node.id, module.second-frontend-machine.aws_instance.app_node.id]
   port = 80
 }
 

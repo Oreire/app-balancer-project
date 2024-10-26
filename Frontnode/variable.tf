@@ -9,5 +9,7 @@ variable "frontend-2-port-2" {}
 variable "frontend-1-sg-name" {}
 variable "frontend-2-sg-name" {}
 variable "vpc_id" {}
+
+#variable "public_subnet_1" {}
 #variable "public_subnet_2" {}
-#variable "public_subnet_1 {}
+
