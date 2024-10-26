@@ -6,10 +6,9 @@ resource "aws_instance" "app_node" {
   instance_type = "t2.micro"
   key_name = "DevOpsVpcKeys"
   vpc_security_group_ids = [aws_security_group.sg_node.id]
-              tags = {
+                tags = {
     Name = var.node_name
   }
 }
-
   #user_data              = file("./Frontend_install.sh")
   #user_data              = file("./backend_install.sh")
