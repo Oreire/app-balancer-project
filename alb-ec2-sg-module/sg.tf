@@ -3,7 +3,7 @@
 
 resource "aws_security_group" "sg_node" {
   name = var.sg_name
-  #vpc_id = aws_vpc.main.id 
+  vpc_id = aws_vpc.main.id 
   egress {
     from_port        = 0
     to_port          = 0
