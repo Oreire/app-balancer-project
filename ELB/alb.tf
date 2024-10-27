@@ -4,7 +4,7 @@ resource "aws_lb_target_group" "my-tg-frontend" {
   name     = "target-group-frontend"
   port     = 80
   protocol = "HTTP"
-  vpc_id   =  aws_vpc.main.id       #var.vpc_id    
+  vpc_id   = aws_vpc.main.id #var.vpc_id    
 
   target_group_health {
     dns_failover {
@@ -21,27 +21,27 @@ resource "aws_lb_target_group" "my-tg-frontend" {
 
 #Add the ALB Target Group Attachment for Frontend Node 1 and Frontend Node 2
 
-resource "aws_lb_target_group_attachment" "tg_attachemnet_frontend" { 
+resource "aws_lb_target_group_attachment" "tg_attachemnet_frontend" {
   target_group_arn = aws_lb_target_group.my-tg-frontend.arn
   target_id        = [module.first-frontend-machine.aws_instance.app_node.id, module.second-frontend-machine.aws_instance.app_node.id]
-  port = 80
+  port             = 80
 }
 
 #Create Application Load Balancer
 
 resource "aws_lb" "my-alb" {
-  name               = "MY-ALB"
-  internal           = false
-  load_balancer_type = "application"
-  vpc_id   = aws_vpc.main.id 
-  subnets            = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id]  
-  security_groups    = [aws_security_group.sg_node.id]                                 
+  name                       = "MY-ALB"
+  internal                   = false
+  load_balancer_type         = "application"
+  vpc_id                     = aws_vpc.main.id
+  subnets                    = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id]
+  security_groups            = [aws_security_group.sg_node.id]
   enable_deletion_protection = false
-  
- tags = {
 
-    Environment = "development"           
-     }
+  tags = {
+
+    Environment = "development"
+  }
 }
 #Create Listener
 
