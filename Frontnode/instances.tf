@@ -6,7 +6,8 @@ module "first-frontend-machine" {
   sg_name        = var.frontend-1-sg-name
   ingress_port_1 = var.frontend-1-port-1
   ingress_port_2 = var.frontend-1-port-2
-  vpc_id         = "vpc-02307ff913fe88468"
+  vpc_id         = var.vpc_id
+  #subnet = "subnet-0a28e33de09562183"                    
 }
 
 module "second-frontend-machine" {
@@ -15,7 +16,8 @@ module "second-frontend-machine" {
   sg_name        = var.frontend-2-sg-name
   ingress_port_1 = var.frontend-2-port-1
   ingress_port_2 = var.frontend-2-port-2
-  vpc_id         = "vpc-02307ff913fe88468"
+  vpc_id         = var.vpc_id                     
+  #subnet = "subnet-0ece36d7e7bc954f9"
 }
 
 data "terraform_remote_state" "remote" {

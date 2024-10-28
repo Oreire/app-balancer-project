@@ -1,6 +1,6 @@
 #Script to Install Ngix on Frontend Machines
 
-#! /bin/bash
+#!/bin/bash
 
 sudo yum update                         # Update Linux package
 sudo yum install nginx -y               # Install Nginx
