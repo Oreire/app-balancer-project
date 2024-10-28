@@ -1,9 +1,6 @@
-
 #Security grough for Frontnode and Backnode environmnets
-
 resource "aws_security_group" "sg_node" {
   name   = var.sg_name
-  #vpc_id = var.vpc_id #"vpc-02307ff913fe88468" 
   egress {
     from_port   = 0
     to_port     = 0
