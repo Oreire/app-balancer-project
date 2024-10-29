@@ -6,8 +6,9 @@ module "first-backend-machine" {
   sg_name        = var.backend-1-sg-name
   ingress_port_1 = var.backend-1-port-1
   ingress_port_2 = var.backend-1-port-2
-  #subnet_id = "subnet-0962a6351814b6b27"
   vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id
+  subnet_id      = var.subnet_id_1
+  availability_zone = var.availability_zone1
   #user_data              = file("./backend_install.sh")
 }
 
@@ -17,8 +18,9 @@ module "second-backend-machine" {
   sg_name        = var.backend-2-sg-name
   ingress_port_1 = var.backend-2-port-1
   ingress_port_2 = var.backend-2-port-2
-  #subnet_id = "subnet-07720202e4d965465"
-  vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id 
+  vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id
+  subnet_id      = var.subnet_id_2
+  availability_zone = var.availability_zone2
   #user_data              = file("./backend_install.sh")
 }
 

@@ -11,3 +11,8 @@ variable "backend-2-sg-name" {}
 variable "vpc_id" {}
 variable "subnet_id_1" {}
 variable "subnet_id_2" {}
+
+variable "availability_zone1" {}
+variable "availability_zone2" {}
+
+
