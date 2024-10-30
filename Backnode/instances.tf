@@ -9,6 +9,7 @@ module "first-backend-machine" {
   vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id
   subnet_id      = var.subnet_id_1
   availability_zone = var.availability_zone1
+  user_data              = file ("./backtend_install.sh")
   }
 
 module "second-backend-machine" {
@@ -20,6 +21,7 @@ module "second-backend-machine" {
   vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id
   subnet_id      = var.subnet_id_2
   availability_zone = var.availability_zone2
+  user_data              = file ("./backtend_install.sh")
   
 }
 
