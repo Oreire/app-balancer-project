@@ -6,6 +6,7 @@ resource "aws_instance" "app_node" {
   instance_type          = "t2.micro"
   key_name               = "DevOpsVpcKeys"
   vpc_security_group_ids = [aws_security_group.sg_node.id]
+  availability_zone = var.zone
   subnet_id = var.subnet_id
   #associate_public_ip_address = true                                            
   tags = {
@@ -13,5 +14,5 @@ resource "aws_instance" "app_node" {
   }
 }
 
-#user_data              = file("./Frontend_install.sh")
+#user_data              = file("./frontend_install.sh")
 #user_data              = file("./backend_install.sh")
