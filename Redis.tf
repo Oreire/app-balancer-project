@@ -35,7 +35,20 @@ resource "aws_elasticache_subnet_group" "redis_psg" {
 
 #Create the Amazon ElastiCache for redis cluster
 
-resource "aws_elasticache_replication_group" "redis-node" {
+resource "aws_elasticache_cluster" "Redis_Node" {
+  cluster_id           = "Single-Master-Node"
+  engine               = "redis"
+  node_type            = "cache.t3.micro"
+  num_cache_nodes      = 1
+  multi_az_enabled = false
+  parameter_group_name = "default.redis7"
+  engine_version       = 7.1
+  port                 = 6379
+  subnet_group_name = aws_elasticache_subnet_group.redis_psg.id
+  security_group_ids = [aws_security_group.redis_sg.id]
+}
+
+/* resource "aws_elasticache_replication_group" "redis-node" {
     automatic_failover_enabled = true
     subnet_group_name = aws_elasticache_subnet_group.redis_psg.id
     preferred_cache_cluster_azs = ["eu-west-2b"]
@@ -50,7 +63,7 @@ resource "aws_elasticache_replication_group" "redis-node" {
     #number_cache_clusters = 1
     replicas_per_node_group = 1
     security_group_ids = [aws_security_group.redis_sg.id]
-    }
+    } */
 
     data "terraform_remote_state" "remote" {
   backend = "s3"
