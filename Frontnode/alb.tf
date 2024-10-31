@@ -1,4 +1,4 @@
-#Create Application Load Balancer
+/* #Create Application Load Balancer
 resource "aws_lb" "app-lb" {
   name                       = "MY-ALB"
   internal                   = false
@@ -17,8 +17,8 @@ resource "aws_lb" "app-lb" {
 #create Security Group for Application Load Balancer
 
 resource "aws_security_group" "sg_alb" {
-  name   = SG_ALB                #what is the problem?
-  vpc_id = data.terraform_remote_state.remote.outputs.vpc_id
+  name   = var.sg_alb
+  vpc_id = var.vpc_id
   egress {
     from_port   = 0
     to_port     = 0
@@ -77,23 +77,12 @@ resource "aws_lb_listener" "alb-ls" {
 
 resource "aws_lb_target_group_attachment" "tg_attachemnet_frontend_node_1" {
   target_group_arn = aws_lb_target_group.frontend-tg.arn
-  target_id        = var.target1 #How to reference EC2 created by module
+  target_id        = var.target1 
   port             = 80
 }
 resource "aws_lb_target_group_attachment" "tg_attachemnet_frontend_node_2" {
   target_group_arn = aws_lb_target_group.frontend-tg.arn
-  target_id        = var.target2  #How to reference EC2 created by module
+  target_id        = var.target2 
   port             = 80
 }
-
-
-data "terraform_remote_state" "remote" {
-  backend = "s3"
-  config = {
-    bucket = "my-albproject-store"
-    key    = "env/vpc/terraform.tfstate"
-    region = "eu-west-2"
-  }
-}
-
- 
+ */

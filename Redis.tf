@@ -47,6 +47,7 @@ resource "aws_elasticache_replication_group" "redis-node" {
     port = 6379
     multi_az_enabled = false
     num_node_groups = 1
+    number_cache_clusters = 1
     replicas_per_node_group = 1
     security_group_ids = [aws_security_group.redis_sg.id]
     }
