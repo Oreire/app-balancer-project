@@ -8,5 +8,3 @@ variable "backend-2-port-1" {}
 variable "backend-2-port-2" {}
 variable "backend-1-sg-name" {}
 variable "backend-2-sg-name" {}
-#variable "Vpc_id" {}
-#variable "subnet_id" {}

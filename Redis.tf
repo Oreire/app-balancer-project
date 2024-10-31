@@ -54,3 +54,11 @@ resource "aws_elasticache_replication_group" "redis-node" {
     security_group_ids = [aws_security_group.redis_sg.id]
     }
    
+   data "terraform_remote_state" "remote" {
+  backend = "s3"
+  config = {
+    bucket = "my-albproject-store"
+    key    = "env/vpc/terraform.tfstate"
+    region = "eu-west-2"
+  }
+}
