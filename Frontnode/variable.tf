@@ -15,3 +15,4 @@ variable "target2" {}
 variable "sg_alb" {} 
 variable "vpc_id" {}
  */
+  
