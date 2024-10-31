@@ -40,7 +40,6 @@ resource "aws_elasticache_cluster" "Redis_Node" {
   engine               = "redis"
   node_type            = "cache.t3.micro"
   num_cache_nodes      = 1
-  multi_az_enabled = false
   parameter_group_name = "default.redis7"
   engine_version       = 7.1
   port                 = 6379
