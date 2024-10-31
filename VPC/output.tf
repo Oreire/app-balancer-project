@@ -1,4 +1,5 @@
 #VPC Output
+
 output "public_subnet_1" {
   value = aws_subnet.public_subnet_1.id
 }
