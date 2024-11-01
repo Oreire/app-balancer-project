@@ -6,7 +6,7 @@
    
    #Content Caching with Redis for low latency
    
-   #Secure Backend Nodes and applications 
+   #Secure Backend Nodes and applications with private subnets & RT
 
 
 # This project implements a layered approach to the microservice design to promote
