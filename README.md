@@ -40,12 +40,14 @@
 
 # Redis Elasticache (Single Master Node) was created as a separate terraform configuration
   
-  #Redis Terraforn file was impelemnted under the prinary project directory
+  #Redis Terraforn file was implemented under the primary project directory
 
 
 # Backend S3 strorage for terraform state files
 
     #Remote Backend S3 bucket created and contained five (5) objects
+
+    #S3 Bucket is Versioned and Encryted
     
     #Each object stores the terraform.tfstate files 
     
