@@ -1,14 +1,18 @@
 # app-balancer-project
-#High Availability Infrastructure Provisioning of ALB Traffic Distribution Targeted at 2 EC2 resources
+   #High Availability Infrastructure Provisioning
+   #ALB Traffic Distribution Targeted at 2 EC2 instances
+   #Content Caching with Redis for low latency
+   #Secure Backend Nodes and applications 
 
-# This project imppements a layered approach to the microservice design for
+# This project implements a layered approach to the microservice design promote
     
-    #Reusability
-    #Manitainability
-    #Change Managemnet
-    #Heirachical Dependencies
+   #Reusability
+   #Manitainability
+   #Change Management
+   #Heirachical Dependencies
 
-# Module used specify the Instance and Security Group Configurations
+# AWS EC2 Instance and Security Group (SG) Module
+  #Creates EC2 instances based on the specified configurations
 
 # Directories implemneted various aspects of the design such as ALB, VPC (including associatd IGW, subnets and RT) Frontnode and Backnode 
 
@@ -22,7 +26,9 @@
 
 # Backend S3 strorage for terraform state files
 
-    #Backend S3 bucket was created and configred to store five (5) objects that conatinated .#tfstate files remotely to promote security, collaboration and state locking amongst others. 
+    #Remote Backend S3 bucket created and contained five (5) objects
+    #Each object stores the terraform.tfstate files 
+    #Remote backend promotes security,collaboration and state locking amongst others. 
 
 
 
