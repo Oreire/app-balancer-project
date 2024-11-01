@@ -8,8 +8,7 @@ module "first-backend-machine" {
   ingress_port_2 = var.backend-1-port-2
   vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id
   subnet_id      = data.terraform_remote_state.remote.outputs.private_subnet_1
-  #user_data              = file ("./backtend_install.sh")
-  }
+}
 
 module "second-backend-machine" {
   source         = "../alb-ec2-sg-module/"
@@ -19,9 +18,10 @@ module "second-backend-machine" {
   ingress_port_2 = var.backend-2-port-2
   vpc_id         = data.terraform_remote_state.remote.outputs.vpc_id
   subnet_id      = data.terraform_remote_state.remote.outputs.private_subnet_2
-  #user_data              = file ("./backtend_install.sh")
-  
+
 }
+
+#Data sources for variables related to the VPC and associated resources
 
 data "terraform_remote_state" "remote" {
   backend = "s3"

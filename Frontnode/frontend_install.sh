@@ -1,4 +1,4 @@
-#Script to Install Ngix on Frontend Machines
+#Script to Install Nginx on Frontend Machines
 
 #!/bin/bash
 

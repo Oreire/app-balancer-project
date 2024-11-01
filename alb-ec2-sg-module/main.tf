@@ -6,12 +6,11 @@ resource "aws_instance" "app_node" {
   instance_type          = "t2.micro"
   key_name               = "DevOpsVpcKeys"
   vpc_security_group_ids = [aws_security_group.sg_node.id]
-  subnet_id = var.subnet_id
+  subnet_id              = var.subnet_id
   #associate_public_ip_address = true                                            
   tags = {
     Name = var.node_name
   }
 }
 
-#user_data              = file("./frontend_install.sh")
-#user_data              = file("./backend_install.sh")
+

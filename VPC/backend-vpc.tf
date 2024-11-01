@@ -1,6 +1,4 @@
-
-# S3 Backend to store state file
-# bucket name and key path assigned dynamically
+# S3 Backend to store state file for VPC and associated infastructure
 
 terraform {
   backend "s3" {

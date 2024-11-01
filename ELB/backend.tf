@@ -1,6 +1,5 @@
 
-# S3 Backend to store state file
-# bucket name and key path assigned dynamically
+# S3 Backend to store state file for ALB
 
 terraform {
   backend "s3" {

@@ -1,6 +1,6 @@
 
-# S3 Backend to store state file
-# bucket name and key path assigned dynamically
+# S3 Backend to store state file for Redis Cache
+
 
 terraform {
   backend "s3" {

@@ -1,5 +1,6 @@
 #Create VPC
 
+
 resource "aws_vpc" "main" {
   cidr_block           = "192.168.0.0/16"
   enable_dns_support   = true
@@ -10,6 +11,7 @@ resource "aws_vpc" "main" {
   }
 }
 
+
 # Create Internet Gateway (IGW)
 
 resource "aws_internet_gateway" "igw" {
@@ -19,6 +21,7 @@ resource "aws_internet_gateway" "igw" {
     Name = "MY-IGW"
   }
 }
+
 
 #Create Routing Table for Public Subnets
 
@@ -33,6 +36,7 @@ resource "aws_route_table" "rt_pub" {
     Name = "Pubsub RT"
   }
 }
+
 
 # Associate Pubsub RT to Public Subnets 1 & 2 
 
@@ -92,6 +96,7 @@ resource "aws_subnet" "private_subnet_2" {
   }
 }
 
+
 #Create Routing Table for Private Subnets
 
 resource "aws_route_table" "rt_private" {
@@ -105,6 +110,7 @@ resource "aws_route_table" "rt_private" {
   }
 }
 
+
 # Associate Prisub RT to Private Subnets 1 & 2 
 
 resource "aws_route_table_association" "rt_associate_private1" {
@@ -116,5 +122,3 @@ resource "aws_route_table_association" "rt_associate_private2" {
   subnet_id      = aws_subnet.private_subnet_2.id
   route_table_id = aws_route_table.rt_private.id
 }
-
- 
