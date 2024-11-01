@@ -54,7 +54,7 @@
     #Remote backend promotes security, collaboration and state locking amongst others. 
 
 
-# Cost efficiency when implemneting this code hands-on
+# Cost efficiency when implementing this code hands-on
   
   #Use the terraform destroy command to destroy all provisioned infrastructure and 
   #Avoid being charged on your account when using the AWS Free Tier.
