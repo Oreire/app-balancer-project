@@ -6,14 +6,14 @@
    
    #Content Caching with Redis for low latency
    
-   #Secure Backend Nodes and applications with private subnets & RT
+   #Secure Backend Nodes and applications with private subnets & Route Tables (RTs)
 
 
 # This project implements a layered approach to the microservice design to promote
     
    #Reusability
    
-   #Manitainability
+   #Maintainability
    
    #Change Management
    
@@ -35,12 +35,17 @@
     
     #ALB DIR specifies the componets of the Application Load Balancer
 
-    #VPC DIR specifies the IGW, Subnets and Route Table    
+    #VPC DIR specifies the IGW, Subnets and RTs    
 
 
-# Redis Elasticache (Single Master Node) was created as a separate terraform configuration
+# Elasticache for Redis (Single Master Node) was created as a separate terraform configuration
   
-  #Redis Terraforn file was implemented under the primary project directory
+  #Redis adffords the implemention of:
+    
+    #Highly Available, Distributed and Secure in-memory cache
+    #Decreased Access L
+    #Increased Throughput
+    #Optimoization of Loads on the Relational or NoSQL databases & Applications
 
 
 # Backend S3 strorage for terraform state files
