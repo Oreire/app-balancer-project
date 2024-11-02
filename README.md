@@ -51,7 +51,7 @@
 
 # Elasticache for Redis (Single Master Node) was created as a separate terraform configuration
   
-  #Redis adffords the implemention of:
+  #Redis affords the implemention of:
     
     Highly Available, Distributed and Secure in-memory cache
     
@@ -59,7 +59,7 @@
     
     Increased Throughput
     
-    Optimization of Loads on the Relational or NoSQL databases & Applications
+    Optimized Loads on the Relational or NoSQL databases & Applications
 
 # Backend S3 strorage for terraform state files
 
