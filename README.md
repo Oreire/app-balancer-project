@@ -43,9 +43,9 @@
   #Redis adffords the implemention of:
     
     #Highly Available, Distributed and Secure in-memory cache
-    #Decreased Access L
+    #Decreased Access Latency
     #Increased Throughput
-    #Optimoization of Loads on the Relational or NoSQL databases & Applications
+    #Optimization of Loads on the Relational or NoSQL databases & Applications
 
 
 # Backend S3 strorage for terraform state files
