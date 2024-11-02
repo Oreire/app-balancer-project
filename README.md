@@ -27,7 +27,7 @@
 
 # Directories implemented various aspects of the design such as ALB, VPC, Frontnode and Backnode 
 
-    #Frontend and Backend Directories used to create EC2 instances
+# Frontend and Backend Directories used to create EC2 instances
     
     #Frontend user_data: frontend_install.sh
        #!/bin/bash
@@ -46,9 +46,9 @@
         sudo systemctl start docker
         sudo systemctl enable docker
 
-    #ALB DIR specifies the componets of the Application Load Balancer
+  # ALB DIR specifies the componets of the Application Load Balancer
 
-    #VPC DIR specifies the IGW, Subnets and RTs    
+  # VPC DIR specifies the IGW, Subnets and RTs    
 
 
 # Elasticache for Redis (Single Master Node) was created as a separate terraform configuration
