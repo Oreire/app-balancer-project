@@ -21,6 +21,15 @@
 # AWS EC2 Instance and Security Group (SG) Module
  
   #Creates EC2 instances based on the specified configurations
+  #This Module is beneficial 
+    
+    #Organisation
+    #Encapsulation          
+    #Reusability                 
+    #Configurations              
+    #Consistency 
+    #Self-service
+
 
 # Directories implemented various aspects of the design such as ALB, VPC, Frontnode and Backnode 
 
