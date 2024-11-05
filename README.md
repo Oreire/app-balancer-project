@@ -21,7 +21,7 @@
 # AWS EC2 Instance and Security Group (SG) Module
  
   #Creates EC2 instances based on the specified configurations
-  #This Module is beneficial 
+  #This Module is beneficial for
     
     #Organisation
     #Encapsulation          
