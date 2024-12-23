@@ -8,7 +8,7 @@
    
    #Secure Backend Nodes and applications with private subnets & Route Tables (RTs)
 
-# This project implements a layered approach to the microservice design to promote
+# This project implements a layered microservice design and approach that promotes
     
    #Reusability
    
@@ -53,7 +53,7 @@
         sudo systemctl enable docker
 
 # ALB DIR specifies the componets of the Application Load Balancer
-    #Application Load Balancer optimises Traffic Accross the Fronend Nodes runing Nginx 
+    #Application Load Balancer optimises Traffic Across the Frontend Nodes runing Nginx 
 
 # VPC DIR specifies the IGW, Subnets and RTs
     #Virtual Private Cloud that houses the Infrstaructure    
