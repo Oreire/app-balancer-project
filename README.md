@@ -1,5 +1,10 @@
 # app-balancer-project
    
+##Project Summary:
+
+**This project implemented a fault-tolerant, scalable, and maintainable infrastructure, optimizing traffic distribution, caching, and cost efficiency. The layered architecture facilitated reusability, hierarchical dependencies, and structured deployment across AWS services. Additionally, Terraform data sources were utilized to dynamically retrieve external resource details, enhancing dependency optimization. Remote state management, leveraging AWS S3 as the backend, further improved security, collaboration, and infrastructure consistency. Together, these approaches ensured the efficient and flexible management of the infrastructure while promoting seamless collaboration.**
+   
+   
    #High Availability Infrastructure Provisioning
    
    #ALB Traffic Distribution Targeted at 2 EC2 instances
