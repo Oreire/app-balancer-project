@@ -1,4 +1,4 @@
-# app-balancer-project
+# Configuring and Deploying AWS Infrastructure Using Terraform
    
 ## Project Summary:
 
