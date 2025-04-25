@@ -21,7 +21,7 @@
    3.	# Infrastructure Design & Security
 
       o	Custom-built Amazon Virtual Private Cloud (VPC) houses all components.
-      o	Subnets (public and private) are implemented across multiple Availability Zones.
+      o	Subnets (public and private) are implemented across multiple Availability Zones using non-overlapping CIDR blocks.
       o	Security Groups (SGs) enforce access control rules for backend nodes.
       o	Secure Backend Nodes and applications with private subnets & Route Tables (RTs)
 
