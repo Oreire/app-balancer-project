@@ -1,7 +1,7 @@
 # Configuring and Deploying AWS Infrastructure Using Terraform
    
 ## Project Summary:
-Overview:
+
 Provisioned a fault‑tolerant and highly available infrastructure on AWS, leveraging Application Load Balancer (ALB) traffic routing across EC2 instances to ensure load distribution and resilience. The layered architecture was designed for scalability, reusability, and structured deployment across AWS services, optimizing caching and cost efficiency. Terraform data sources were employed to dynamically retrieve external resource details, enhancing dependency management and reducing configuration drift. Remote state management via AWS S3 backend improved collaboration, security, and consistency across environments. This IaC‑driven approach streamlined infrastructure provisioning, reinforced governance, and enabled efficient long‑term management of cloud resources.
 
 
