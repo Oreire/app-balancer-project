@@ -5,8 +5,6 @@ Overview:
 Provisioned a fault‑tolerant and highly available infrastructure on AWS, leveraging Application Load Balancer (ALB) traffic routing across EC2 instances to ensure load distribution and resilience. The layered architecture was designed for scalability, reusability, and structured deployment across AWS services, optimizing caching and cost efficiency. Terraform data sources were employed to dynamically retrieve external resource details, enhancing dependency management and reducing configuration drift. Remote state management via AWS S3 backend improved collaboration, security, and consistency across environments. This IaC‑driven approach streamlined infrastructure provisioning, reinforced governance, and enabled efficient long‑term management of cloud resources.
 
 
-**This project implemented a fault-tolerant, scalable, and maintainable infrastructure, optimizing traffic distribution, caching, and cost efficiency. The layered architecture facilitated reusability, hierarchical dependencies, and structured deployment across AWS services. Additionally, Terraform data sources were utilized to dynamically retrieve external resource details, enhancing dependency optimization. Remote state management, leveraging AWS S3 as the backend, further improved security, collaboration, and infrastructure consistency. Together, these approaches ensured the efficient and flexible management of the infrastructure while promoting seamless collaboration.**
-
 ## Key Components and Architecture
 
    1.	# High Availability & Traffic Distribution
@@ -80,7 +78,7 @@ Provisioned a fault‑tolerant and highly available infrastructure on AWS, lever
 
 # Elasticache for Redis (Single Master Node) was created as a separate terraform configuration
   
-  #Redis affords the implemention of:
+  #Redis affords the implementation of:
     
     Highly Available, Distributed and Secure in-memory cache
     
@@ -105,9 +103,9 @@ Provisioned a fault‑tolerant and highly available infrastructure on AWS, lever
       	Azure Blob Storage & Google Cloud Storage – Managed state storage solutions.
 
    
-# Terraform Data Sources were used in the impelmentation of this project.
+# Terraform Data Sources were used in the implementation of this project.
    
-   o	The data sources employed allowed Terraform configurations to reference and utilize outputs from existing resources managed outside the current Terraform execution. By leveraging the remote state stored       in an AWS S3 bucket serving as the backend, Terraform enabled efficient infrastructure reuse through dynamic dependencies.
+   o	The data sources employed allowed Terraform configurations to reference and utilize outputs from existing resources managed outside the current Terraform execution. By leveraging the remote state stored in an AWS S3 bucket serving as the backend, Terraform enabled efficient infrastructure reuse through dynamic dependencies.
    
    	#Common Use Cases:
       
